@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<title>
+My Music Play List
+</title>
+<body>
+<p>Song 1 :  <input type = "button" value="add" >
+<input type = "button" value="remove" ></p> 
+<p>Song 2 : <input type="text" id="song1"> <input type = "button" value="add" >
+<input type = "button" value="remove" ></p> 
+<p>Song 3 : <input type="text" id="song1"> <input type = "button" value="add" >
+<input type = "button" value="remove" ></p> 
+<p>Song 4 : <input type="text" id="song1"> <input type = "button" value="add" >
+<input type = "button" value="remove" ></p> 
+<p>Song 5 : <input type="text" id="song1"> <input type = "button" value="add" >
+<input type = "button" value="remove" ></p>
+<p>These are your songs you have added</p> 
+
+
+
+</body>
+</html>

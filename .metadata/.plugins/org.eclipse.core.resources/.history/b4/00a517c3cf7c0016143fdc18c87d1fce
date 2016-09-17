@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My Music Play List</title>
+</head>
+<body onload="loadSongs()">
+<h1>My Music Play List</h1>
+<p>song 1 :  <input type = "button" value="add" onclick="song1()" >
+<input type = "button" value="remove" onclick="removesong1()" ></p> 
+<p>Song 2 :  <input type = "button" value="add" onclick="song2()">
+<input type = "button" value="remove" onclick="removesong2()" ></p> 
+<p>Song 3 : <input type = "button" value="add" onclick="song3()" >
+<input type = "button" value="remove" onclick="removesong3()" ></p> 
+<p>Song 4 : <input type = "button" value="add" onclick="song4()">
+<input type = "button" value="remove" onclick="removesong4()" ></p> 
+<p>Song 5 :  <input type = "button" value="add" onclick="song5()">
+<input type = "button" value="remove" onclick="removesong5()"></p>
+<p>These are your songs you have added</p>
+<div id="song1"></div>
+<div id="song2"></div>
+<div id="song3"></div>
+<div id="song4"></div>
+<div id="song5"></div>
+</body>
+<Script>
+function loadSongs(){
+	if(localStorage.song1 && Number(localStorage.song1) !=0){
+		document.getElementById("song1").innerHTML = "song1";
+	} else if(localStorage.song1 && Number(localStorage.song1) == 0){
+		document.getElementById("song1").innerHTML = "";
+	}
+	if(localStorage.song2 && Number(localStorage.song2) !=0){
+		document.getElementById("song2").innerHTML = "song2";
+	} else if(localStorage.song2 && Number(localStorage.song2) == 0){
+		document.getElementById("song2").innerHTML = "";
+	}
+	if(localStorage.song3 && Number(localStorage.song3) !=0){
+		document.getElementById("song3").innerHTML = "song3";
+	} else if(localStorage.song1 && Number(localStorage.song3) == 0){
+		document.getElementById("song3").innerHTML = "";
+	}
+	if(localStorage.song4 && Number(localStorage.song4) !=0){
+		document.getElementById("song4").innerHTML = "song4";
+	} else if(localStorage.song4 && Number(localStorage.song4) == 0){
+		document.getElementById("song4").innerHTML = "";
+	}
+	if(localStorage.song5 && Number(localStorage.song5) !=0){
+		document.getElementById("song5").innerHTML = "song5";
+	} else if(localStorage.song5 && Number(localStorage.song5) == 0){
+		document.getElementById("song5").innerHTML = "";
+	}
+}
+function song1(){
+	if(typeof(Storage)!== "undefined"){
+		if (localStorage.song1) {
+		localStorage.song1 = Number(localStorage.song1)+1;
+		} else{
+			localStorage.song1 = 1;	
+		}
+		loadSongs();
+		}else{
+			document.getElementById("song1").innerHTML = "Sorry, your browser does not support web storage...";
+		}
+		
+	}
+function song2(){
+	if(typeof(Storage)!== "undefined"){
+		if (localStorage.song2) {
+		localStorage.song2 = Number(localStorage.song2)+1;
+		} else{
+			localStorage.song2 = 1;	
+		}
+		loadSongs();
+		}else{
+			document.getElementById("song2").innerHTML = "Sorry, your browser does not support web storage...";
+		}
+		
+	}
+function song3(){
+	if(typeof(Storage)!== "undefined"){
+		if (localStorage.song3) {
+		localStorage.song3 = Number(localStorage.song3)+1;
+		} else{
+			localStorage.song3 = 1;	
+		}
+		loadSongs();
+		}else{
+			document.getElementById("song3").innerHTML = "Sorry, your browser does not support web storage...";
+		}
+		
+	}
+function song4(){
+	if(typeof(Storage)!== "undefined"){
+		if (localStorage.song3) {
+		localStorage.song3 = Number(localStorage.song1)+1;
+		} else{
+			localStorage.song3 = 1;	
+		}
+		loadSongs();
+		}else{
+			document.getElementById("song3").innerHTML = "Sorry, your browser does not support web storage...";
+		}
+		
+	}
+function song5(){
+	if(typeof(Storage)!== "undefined"){
+		if (localStorage.song5) {
+		localStorage.song5 = Number(localStorage.song5)+1;
+		} else{
+			localStorage.song5 = 1;	
+		}
+		loadSongs();
+		}else{
+			document.getElementById("song5").innerHTML = "Sorry, your browser does not support web storage...";
+		}
+		
+	}
+	
+function removesong1(){
+	if(typeof(Storage)!= "undefined"){
+		if(localStorage.song1 && Number(localStorage.song1) >0){
+			localStorage.wingsCount = Number(localStorage.song1) -1;
+		}
+		
+		LoadCart();
+	}
+	else{
+		document.getElementById("wingsdiv").innerHTML = "Sorry, your browser does not support web storage...";
+	}
+}
+</Script>
+</html>

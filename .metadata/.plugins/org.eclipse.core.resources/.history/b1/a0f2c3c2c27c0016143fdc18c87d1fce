@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<title>
+My Music Play List
+</title>
+<body>
+<p>Song 1 : <input type="text" id="song1"> <input type = "button" value="add" >
+<input type = "button" value="add" ></p> 
+
+
+</body>
+</html>

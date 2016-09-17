@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<title>
+My Music Play List
+</title>
+<body>
+<p>Song 1 :  <input type = "button" value="add" onclick="song1()" >
+<input type = "button" value="remove" onclick="song1()" ></p> 
+<p>Song 2 : <input type="text" id="song1"> <input type = "button" value="add" >
+<input type = "button" value="remove" ></p> 
+<p>Song 3 : <input type="text" id="song1"> <input type = "button" value="add" >
+<input type = "button" value="remove" ></p> 
+<p>Song 4 : <input type="text" id="song1"> <input type = "button" value="add" >
+<input type = "button" value="remove" ></p> 
+<p>Song 5 : <input type="text" id="song1"> <input type = "button" value="add" >
+<input type = "button" value="remove" ></p>
+<p>These are your songs you have added</p>
+<p id = 'demo'></p> 
+<Script>
+function song1(){
+	var value = document.getElementById("add");
+	if(document.getElementById == add){
+		document.getElementById("demo").innerHTML  = "Song1";	
+	}
+	else {
+		document.getElementById("demo").innerHTML  = "";
+		
+	}
+	
+}
+
+
+</Script>
+
+
+</body>
+</html>

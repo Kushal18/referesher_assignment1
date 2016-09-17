@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My Music Play List</title>
+</head>
+<body onload="loadSongs()">
+<p>song 1 :  <input type = "button" value="add" onclick="add()" >
+<input type = "button" value="remove" onclick="remove()" ></p> 
+<p>Song 2 :  <input type = "button" value="add" onclick="add()">
+<input type = "button" value="remove" onclick="remove()" ></p> 
+<p>Song 3 : <input type = "button" value="add" onclick="add()" >
+<input type = "button" value="remove" onclick="remove()" ></p> 
+<p>Song 4 : <input type = "button" value="add" onclick="add()">
+<input type = "button" value="remove" onclick="remove()" ></p> 
+<p>Song 5 :  <input type = "button" value="add" onclick="add()">
+<input type = "button" value="remove" onclick="remove()"></p>
+<p>These are your songs you have added</p>
+<div id="song1"></div>
+<div id="song2"></div>
+<div id="song3"></div>
+<div id="song4"></div>
+<div id="song5"></div>
+</body>
+<Script>
+function loadSongs(){
+	if(localStorage.song1 && Number(localStorage.song1) !=0){
+		document.getElementById("song1").innerHTML = "song1";
+	} else if(localStorage.song1 && Number(localStorage.song1) == 0){
+		document.getElementById("song1").innerHTML = "";
+	}
+}
+function add(){
+	if(typeof(Storage)!== "undefined"){
+		if (localStorage.song1) {
+		localStorage.song1 = Number(localStorage.song1)+1;
+		} else{
+			localStorage.song1 = 1;	
+		}
+		loadSongs();
+		}else{
+			document.getElementById("song1").innerHTML = "Sorry, your browser does not support web storage...";
+		}
+		
+	}
+</Script>
+</html>
