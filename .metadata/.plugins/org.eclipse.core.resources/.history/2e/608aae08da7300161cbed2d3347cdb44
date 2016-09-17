@@ -1,0 +1,67 @@
+<html> <head> <meta charset="ISO-8859-1"> 
+<title>SJSU Eligibility Criteria </title>
+ </head> <body>
+ <h1>SJSU Eligibility Criteria </h1> 
+ <p>GRE:</p> <input type="text" id="gre" />  
+ <p>TOEFEL:</p> <input type="text" id="toefel" />  
+ <p>UnderGrad GPA:</p> <input type="text" id="gpa" />  
+ <input type="button" id="btn" value ="Check Eligibilty" onclick="checkEligibilty()"/>
+ <input type="button" id="btn" value ="Application Process" onclick="application()"/>
+ </body> <script> 
+ function checkEligibilty()
+    { 
+	var gre = document.getElementById("gre").value;  
+	var toefel = document.getElementById("toefel").value;  
+	var gpa = document.getElementById("gpa").value;  
+	var eligibility = true;
+	if(gre < 300)
+	{    
+	eligibility = false ;    
+	}  else {
+	eligibility = true;
+	}
+	if(gpa < 3 ) 
+	{  
+	eligibility = false ; 
+	}  else {
+	eligibility = true;
+	}
+	if (toefel < 80)
+	{   
+	eligibility= false;  
+	} else {
+	eligibility = true;
+	}  
+	if(eligibility === true)
+	{   
+	alert("you are chances of getting an admit is high")  
+	} 
+	else if (gre < 300){   
+	alert("consider giving GRE again")  
+	}
+	else if (toefel < 80){   
+	alert("consider giving toefel again")  
+	}
+	else if (gpa < 3){   
+	alert("GPA is too low")  
+	}	
+	}
+	function application(){
+	document.write("Candidate should fill application form at : sjsu website" +"<br>");
+	document.write("Candidate must provide the following details" +"<br>");
+	document.write("-------------------------------------------------------------" +"<br>");
+	document.write("1. GRE Score" +"<br>");
+	document.write("2. TOEFEL Score" +"<br>");
+	document.write("3. WES evaluation Score" +"<br>");
+	document.write("4. Undergrad Degree Certificate" +"<br>");
+	document.write("5. Statment of Purpose" +"<br>");
+	document.write("6. Three Letter of Recommendation" +"<br>");
+	document.write("7. Letter of Recommendation" +"<br>");
+	document.write("8. Expierence Certificate if the candidate has any work Expierence" +"<br>");
+	document.write("-------------------------------------------------------------" +"<br>");
+	document.write("Once all the details are provided candidate status is updated in two or three weeks" +"<br>");
+
+	
+	}
+	</script>
+	</html> 

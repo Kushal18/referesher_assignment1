@@ -1,0 +1,25 @@
+package javaReferesher;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class carParking {
+	public static void main(String[] args) {   
+		queue carParking = new queue();  
+		int noOfparking = 5;
+		System.out.println("Enter Key to find a parking spot");
+		Scanner sc = new Scanner(System.in); 
+		for (int i = 1; i <= 5; i++) {    
+			sc.hasNextLine();    
+			carParking.enqueue(sc.nextLine());
+			noOfparking--;
+			System.out.println("parking spot available for next cars " +noOfparking );
+			if(noOfparking == 0){
+				System.out.println("This parking space is now full "  );
+				break;
+			}
+			
+		}
+		}
+}
+	
+

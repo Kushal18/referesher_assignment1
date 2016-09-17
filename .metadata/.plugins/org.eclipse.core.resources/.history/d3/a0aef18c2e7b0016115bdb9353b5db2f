@@ -1,0 +1,18 @@
+package javaReferesher;
+
+import java.util.Queue;
+import java.util.Scanner;
+
+public class cricketPlayers {
+	public static void main(String[] args) {   
+		queue gameTicketQueue = new queue();  
+		int noOfTickets = 5;   
+		System.out.println("Welcome to the game ticket counter");   
+		Scanner sc = new Scanner(System.in); 
+		System.out.println("Enter your name to buy a Game Ticket:"); 
+		for (int i = 1; i <= 8; i++) {    
+			sc.hasNextLine();    
+			gameTicketQueue.enqueue(sc.nextLine());   } 
+	}
+
+}

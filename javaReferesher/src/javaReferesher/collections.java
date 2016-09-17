@@ -1,0 +1,48 @@
+//delete a duplicate element from a linked list
+
+package javaReferesher;
+import java.util.*;
+import java.util.HashSet;
+class LinkedListNode {  
+    public int data;  
+    public LinkedListNode next;  
+
+    public LinkedListNode(int data) {  
+        this.data = data;    
+    }  
+}
+
+public class collections {
+
+	public static void main(String[] args){
+		LinkedList<Integer> list=new LinkedList<Integer>();
+	       list.addLast(1);
+	       list.addLast(2);
+	       list.addLast(3);
+	       list.addLast(3);
+	       list.addLast(3);
+	       list.addLast(4);
+	       list.addLast(4);
+	       System.out.println(list);
+	       LinkedListNode head=new LinkedListNode(list.getFirst());
+	       removeDuplicates(head);
+ 
+        
+	}
+	
+	public static void removeDuplicates (LinkedListNode n){
+		  Hashtable table = new Hashtable();
+		  LinkedListNode previous = null;
+		  while(n!=null){
+		      if(table.containsKey(n.data)){
+		          previous.next = n.next;
+		      } else {
+		          table.put(n.data, true);
+		          previous = n;
+		      }
+		      n = n.next;
+		  }
+		}
+	
+	
+}

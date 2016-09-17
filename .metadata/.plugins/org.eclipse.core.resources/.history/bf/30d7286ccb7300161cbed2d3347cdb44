@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="ISO-8859-1"> 
+<title>Employee Details</title> 
+</head> 
+<body> 
+</body> 
+<script>  
+var employee = {
+ name : "Kushal Joshi",
+ place : "San Jose",
+ currentEmployee : "oracle",
+ manager : "Neel",
+ contactHr:"Helen",
+ previousEmployee : ["wipro" , "Infosys" , "Cisco"],
+ //DOJ : date of joining
+ DOJ  : "01/01/2012",
+ role : "Software Engineer",
+ basicDetails : function(){
+  document.write("----------------------------------------------" +"<br>")
+  document.write("Basic details of " +this.name +"<br>")
+  document.write("current employee " +this.currentEmployee +"<br>");
+  document.write("Works in banking division team " +"<br>");
+  document.write("Immediate Manager "+this.manager +"<br>");
+  document.write("Hr contact "+this.contactHr +"<br>");
+  document.write("----------------------------------------------" +"<br>")
+ },
+ previousEmployee : function(){
+	 document.write(this.previousEmployee.toString() +"<br>");
+ } 
+    
+};
+/*employee.name;
+employee.place;
+employee.currentEmployee;*/
+employee.basicDetails();
+//employee.role;
+employee.previousEmployee();
+</script>
+</html>		
+ 
+ 
+ 

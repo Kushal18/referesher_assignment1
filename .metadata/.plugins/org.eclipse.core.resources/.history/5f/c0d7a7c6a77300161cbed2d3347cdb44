@@ -1,0 +1,28 @@
+<!DOCTYPE html> <html> <head>
+ <meta charset="ISO-8859-1"> <title>Variables</title> 
+ </head> 
+ <body> <h1> Simple calculator using two variables and a operator </h1>
+ </body>
+ <script> var calculator = function(operator,a,b){
+    var result ;
+ if(operator = "/"){
+     if(b === 0){
+      result = "cannot divide by zero";
+      return result;
+     }
+  return  result = a / b;
+ }
+ if(operator = "*"){
+  return  result = a * b;
+ }
+
+}
+var first = 8;
+var second = 4;
+var division = calculator("/",first,second);
+document.write(division);
+document.write("<br>");
+var Multiplication = calculator("*",first,second);
+document.write(Multiplication);
+document.write("<br>");
+</script> </html>   

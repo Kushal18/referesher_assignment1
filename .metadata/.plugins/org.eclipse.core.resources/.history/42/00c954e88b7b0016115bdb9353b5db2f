@@ -1,0 +1,20 @@
+package javaReferesher;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class carParking {
+	public static void main(String[] args) {   
+		queue carParking = new queue();  
+		int noOfparking = 5;   
+		Scanner sc = new Scanner(System.in); 
+		for (int i = 1; i <= noOfparking; i++) {    
+			sc.hasNextLine();    
+			gameTicketQueue.enqueue(sc.nextLine());
+			noOfparking--;
+			System.out.println("Number of parking spots left" +noOfparking );	
+			} 
+		System.out.println("Following people got the ticket >>>>" );   
+		for (int i = 0; i < 5; i++) {  
+			System.out.println(gameTicketQueue.dequeue());   } 
+	}
+}

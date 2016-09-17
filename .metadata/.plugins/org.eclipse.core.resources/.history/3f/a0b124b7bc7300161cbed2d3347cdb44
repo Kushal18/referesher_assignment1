@@ -1,0 +1,48 @@
+<!DOCTYPE html> <html> <head>
+ <meta charset="ISO-8859-1"> <title>Variables</title> 
+ </head> 
+ <body> <h1> Logical operations </h1>
+ </body>
+ <script> var calculator = function(operator,a,b){
+    var result ;
+ if(operator === "/"){
+     if(b === 0){
+      result = "cannot divide by zero";
+      return result;
+     }
+  return  result = a / b;
+ }
+ else if(operator === "*"){
+	 document.write("Multiplication " "<br>");
+  return  result = a * b;
+ }else if(operator === "+"){
+	 document.write("Addition "<br>");
+	   return result = a + b;
+
+ }else if(operator === "-"){
+	 document.write("subtraction +"<br>");
+    return result = a - b;
+ }
+ else if (operator === "$"){
+	 document.write("String Concatination +"<br>");
+	 return result = "a" + "b";
+ } 
+};
+
+var first = 8;
+var second = 4;
+var division = calculator("/",first,second);
+document.write("division result is " +division +"<br>");
+
+var Multiplication = calculator("*",first,second);
+document.write("Multiplication result is " +Multiplication+"<br>");
+
+var addition = calculator("+" , first , second );
+document.write("addition is " +addition +"<br>");
+
+var subtraction = calculator("-" , first , second);
+document.write("subtraction is " +subtraction +"<br>");
+
+var concatination = calculator("$" , first , second);
+document.write("Concatinating first and second " +concatination +"<br>");
+</script> </html>   

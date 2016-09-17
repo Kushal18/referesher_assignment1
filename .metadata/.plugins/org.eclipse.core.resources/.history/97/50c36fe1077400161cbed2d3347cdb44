@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> Team Rankings </h1>
+<p>Select a cricket team from the dropdown</p>
+
+<select id="cricketTeam" onchange="teamRanking()">
+  <option value="Australia">Australia
+  <option value="India">India
+  <option value="South Africa">South Africa
+  <option value="Pakistan">Pakistan
+</select>
+
+<p>When you select a Team it's Test , ODI and T20 ranking details will be displayed</p>
+<p id="demo1"></p>
+<p id="demo"></p>
+
+
+<script>
+var india = "Team India Test, ODI and T20 Rank " +'<br>'; 
+function teamRanking() {
+    var team = document.getElementById("cricketTeam").value;
+    if (team === "India"){
+    	document.getElementById("demo1").innerHTML = "India Test , ODI and T20 world Ranking are as follows: " +"<br>" ;
+    	document.getElementById("demo").innerHTML = team + "1. Test Ranking :  2 ";
+    	document.getElementById("demo").innerHTML = team + "2. ODI  Ranking : 1";
+    	document.getElementById("demo").innerHTML = team + "3. T20  Ranking : 5";
+    }
+    
+}
+</script>
+
+</body>
+</html>
+
+

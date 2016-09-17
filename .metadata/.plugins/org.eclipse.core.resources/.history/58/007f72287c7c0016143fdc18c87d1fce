@@ -1,0 +1,26 @@
+package javaReferesher;
+
+public class Anyclass<T> {
+	private String name ;  
+	private String size ;  
+	public String getFood() 
+	{   
+		return name;  
+	}  
+	public void setName(String name) 
+	{   
+		this.name = name;  
+		
+	}  
+	public String getSize() {   
+		return size;  
+		}  
+	public void setSize(String size) {   
+		this.size = size;  
+		}  
+	public <T> T makeProduct(Class<T> t) throws InstantiationException, IllegalAccessException
+	{   
+		return t.newInstance() ;  
+	} 
+
+}

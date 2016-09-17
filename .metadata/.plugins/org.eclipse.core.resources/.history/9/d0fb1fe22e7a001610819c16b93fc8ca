@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head><script type="text/javascript" src ="../test_javascript/data.json" ></script></head>
+<body onload="getData();">
+<h1> Employee details </h1>
+<h2>Employee Name : <b id="employee"></b> &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 
+Employee ID : <b id="employeeid" ></b> </h2>
+<input type="button" onclick ="showDetails()" value="Show Details" name="Show Details" />
+<p id="details"></p>
+</body>
+<script>
+var data = '{"Name" : "kushal Joshi",
+	 "branch" : "Bangalore", 
+	 "details" : [
+	 {
+	 "employeeid" : "010365277", 
+	 "age" : "26", 
+	 "sex" : "M", 
+	 "Role" : "Software Developer", 
+	 "DOJ" : "08/09/2012",
+	 "email":"kushal.d.joshi@gmail.com" 
+	 },
+	]
+	 };
+function getData()
+{ 
+	var result = JSON.parse(data);
+	var employeeName = result.Name;
+	alert("employee name is" +employeeName);
+	//var employeeid = result.details[2].sjsuid; 
+	document.getElementById("employee").innerHTML = employeeName; 
+	document.getElementById("employeeid").innerHTML = employeeid; 
+}
+</script>
+</html>

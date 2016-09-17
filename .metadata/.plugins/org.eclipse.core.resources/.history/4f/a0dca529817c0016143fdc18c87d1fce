@@ -1,0 +1,23 @@
+package javaReferesher;
+
+public class Anycar<T> {
+	private String car ;  
+	private String make ;  
+	private String miles ;  
+	public String setMake(String make) {   
+	return this.make = make;  
+	}  
+	public void setCar(String name) 
+	{   
+	this.car = name;  
+	}  
+	public String setMiles(String miles) 
+	{   
+	return this.miles = miles;  
+	}  
+	public <T> T makeCar(Class<T> t) throws InstantiationException, IllegalAccessException
+	{   
+	return t.newInstance();  
+	} 	 
+
+}

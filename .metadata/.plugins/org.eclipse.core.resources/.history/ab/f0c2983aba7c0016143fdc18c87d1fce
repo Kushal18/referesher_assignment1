@@ -1,0 +1,46 @@
+package javaReferesher;
+
+public class Multithread implements Runnable {
+	
+	private String threadName;
+	private int breadth,height;
+	
+	public Multithread(String threadName,int breadth,int height) {
+		// TODO Auto-generated constructor stub
+		this.threadName = threadName;
+		this.breadth = breadth;
+		this.height = height;
+		
+	}
+	public void findArea(int breadth,int height){
+		
+		System.out.println("Thread - "+threadName+" calculating area of the treangle.");
+		System.out.println("Area = "+"$"+(breadth * height ) *0.5);
+		System.out.println("Thread - "+threadName+" suspended.");
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println("Welcome to thread - "+threadName);
+		System.out.println("Loading.....");
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e);
+		}
+		findInterest(principle,rate,time);
+		
+	}
+
+	public static void main(String args[]){
+		
+		Thread t1 = new Thread(new multi("Sandra", 80,10,2));
+		t1.start();
+		Thread t2 = new Thread(new multi("Jose", 100,15,1));
+		t2.start();
+	}
+
+
+}

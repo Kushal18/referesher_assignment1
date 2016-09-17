@@ -1,0 +1,61 @@
+<!DOCTYPE html> <html> <head>
+ <meta charset="ISO-8859-1"> <title>Variables</title> 
+ </head> 
+ <body> <h1> Logical operations </h1>
+ </body>
+ <script> var calculator = function(operator,a,b){
+    var result ;
+ if(operator === "/"){
+     if(b === 0){
+      result = "cannot divide by zero";
+      return result;
+     }
+  return  result = a / b;
+ }
+ else if(operator === "*"){
+	
+  return  result = a * b;
+ }else if(operator === "+"){
+	 
+	   return result = a + b;
+
+ }else if(operator === "-"){
+	 
+    return result = a - b;
+ }
+ else if (operator === "$"){
+	 return result = a + b;
+ }
+ else if(operator === "||"){
+	 if ( a = 2 || a); // by default takes a values as 2 else takes the inputed value
+	 return a;
+ }
+};
+
+var first = 8;
+var second = 4;
+// divides the first and second operations
+var division = calculator("/",first,second);
+document.write("division result is " +division +"<br>");
+
+//multiplies the first and second operations
+var Multiplication = calculator("*",first,second);
+document.write("Multiplication result is " +Multiplication+"<br>");
+
+//adds the first and second operations
+var addition = calculator("+" , first , second );
+document.write("addition is " +addition +"<br>");
+
+//subtracts the first and second operations
+var subtraction = calculator("-" , first , second);
+document.write("subtraction is " +subtraction +"<br>");
+
+//concatinates 8 and 4 when passed as string
+var concatination = calculator("$" , "8" , "4");
+document.write("Concatinating " +concatination +"<br>");
+
+//or operation to set the default values
+var orOperation = calculator("||" , ,8);
+document.write("oroperation " +concatination +"<br>");
+
+</script> </html>   

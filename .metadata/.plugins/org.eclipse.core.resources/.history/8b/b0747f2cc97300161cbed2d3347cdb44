@@ -1,0 +1,24 @@
+var employee = {
+ name : "Kushal Joshi",
+ place : "San Jose",
+ currentEmployee : "oracle",
+ manager : "Neel",
+ contactHr:"Helen",
+ previousEmployee : ["wipro" , "Infosys" , "Cisco"],
+ //DOJ : date of joining
+ DOJ  : "01/01/2012",
+ role : "Software Engineer",
+ basicDetails : function(){
+  console.log("current employee " +this.currentEmployee);
+  console.log("Works in banking division team ");
+  console.log("Immediate Manager "+this.manager);
+  console.log("Hr contact "+this.contactHr);
+ },
+ //commute : 
+    
+}
+employee.name;
+employee.place;
+employee.
+employee.basicDetails();
+employee.role;

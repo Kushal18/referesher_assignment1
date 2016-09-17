@@ -1,0 +1,44 @@
+<!DOCTYPE html> <html> <head> <meta charset="ISO-8859-1">
+<title>Student validation form</title> </head> 
+<body>  <p><b>Enter student ID</b></p>
+<input type="text" name="Student ID" id="studentid" />  <p id="student"></p> 
+<p><b>Student Name</b></p>  <input type="text" name="Student Name" id="studentname" />  <p id="studentName"></p> 
+<p><b>Student phone no</b></p>  <input type="text" name="studentPhoneNo" id="studentPhoneNo" />  <p id="studentPhoneNo"></p>  </p> 
+ <p><b>Enter Email Id</b></p>  <input type="text" name="EmailId" id="Email" />  <p id="email"></p>  </p>  
+ <br>  <br>  <input type="button" value="checkValidation" id="checkValidation"   onclick="checkValidation()" /> 
+ <script>   
+ function checkValidation() 
+ {  
+ var studentID = new RegExp(/[0]{1}\d{8}/); 
+ var studentName = new RegExp(/[a-zA-Z]/);
+ var phoneNoMatch = new RegExp(/[+][0-9]{2}-[1-9]{3}-[19]{4}/);
+ var verified = true;
+ console.log(document.getElementById("studentid").value);    
+ if (!(document.getElementById("studentid").value).match(studentID)) 
+ {     
+ document.getElementById("student").innerHTML = "Student ID cannot have characters";    
+ document.getElementById("student").style.color='red';
+ var verified = false;
+ } 
+ else 
+ {
+	 document.getElementById("student").innerHTML = "";
+	 var verified = true;
+ }
+ alert("Student Name::"+document.getElementById("studentname").value);
+ if (!(document.getElementById("studentname").value).match(studentName)) 
+ {     
+ document.getElementById("studentName").innerHTML = "Student Name cannot have numbers";    
+ document.getElementById("studentName").style.color='red';
+ var verified = false;
+ } 
+ else 
+ {
+	 document.getElementById("studentName").innerHTML = "";
+	 var verified = true;
+ }
+ }
+ 
+ </script>
+  </body> 
+  </html>

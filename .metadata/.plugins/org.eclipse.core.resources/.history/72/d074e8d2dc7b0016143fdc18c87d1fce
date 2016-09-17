@@ -1,0 +1,23 @@
+//delete a duplicate element from a linked list
+
+package javaReferesher;
+
+import java.util.LinkedList;
+
+public class collections {
+
+	public static void main(String[] args){
+		LinkedList<Integer> linkedlist = new LinkedList<Integer>();
+		//add elements onto the linked list
+		linkedlist.add(1);
+		linkedlist.add(2);
+		linkedlist.add(3);
+		linkedlist.add(4);
+		linkedlist.add(1);
+		linkedlist.add(5);
+		//1->2->3->4->1->5 hence the final ouput should be : 1->2->3->4->5
+ for(int i :linkedlist ) {
+	 System.out.println(i);
+ }
+	}
+}

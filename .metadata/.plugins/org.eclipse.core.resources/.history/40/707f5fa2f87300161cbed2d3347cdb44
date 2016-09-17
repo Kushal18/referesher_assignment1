@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> Team Rankings </h1>
+<p>Select a cricket team from the dropdown</p>
+
+<select id="cricketTeam" onchange="teamRanking()">
+  <option value="Australia">Australia
+  <option value="India">India
+  <option value="South Africa">South Africa
+  <option value="Pakistan">Pakistan
+</select>
+
+<p>When you select a Team it's Test , ODI and T20 ranking details will be displayed</p>
+
+<p id="cricketTeam"></p>
+
+<script>
+function teamRanking() {
+    var x = document.getElementById("cricketTeam").value;
+    document.getElementById("cricketTeam").innerHTML = "You selected: " + x;
+}
+</script>
+
+</body>
+</html>
+
+

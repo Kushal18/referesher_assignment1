@@ -1,0 +1,13 @@
+data = '{"Name" : "kushal Joshi",
+		 "branch" : "Bangalore", 
+		 "details" : [
+		 {
+		 "employeeid" : "010365277", 
+		 "age" : "26", 
+		 "sex" : "M", 
+		 "Role" : "Software Developer", 
+		 "DOJ" : "08/09/2012",
+		 "email":"kushal.d.joshi@gmail.com" 
+		 },
+		]
+		 }';

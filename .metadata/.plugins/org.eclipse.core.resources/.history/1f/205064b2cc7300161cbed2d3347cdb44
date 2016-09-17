@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="ISO-8859-1"> 
+<title>Employee Details</title> 
+</head> 
+<body> 
+</body> 
+<script>  
+var employee = {
+ name : "Kushal Joshi",
+ place : "San Jose",
+ currentEmployee : "oracle",
+ manager : "Neel",
+ contactHr:"Helen",
+ previousEmployee : ["wipro" , "Infosys" , "Cisco"],
+ //DOJ : date of joining
+ DOJ  : "01/01/2012",
+ role : "Software Engineer",
+ basicDetails : function(){
+  document.write("----------------------------------------------" +"<br>")
+  document.write("Basic details of " +this.name +"<br>")
+  document.write("1. current employee: " +this.currentEmployee +"<br>");
+  document.write("2. Joined in " +this.DOJ +"<br>");
+  document.write("3. Works in banking division team " +"<br>");
+  document.write("4. Immediate Manager: "+this.manager +"<br>");
+  document.write("5. Hr contact: "+this.contactHr +"<br>");
+  document.write("----------------------------------------------" +"<br>")
+ },
+ previous : function(){
+	 document.write(this.name + "Had Worked in " +this.previousEmployee.toString() +"<br>");
+ } 
+    
+};
+document.write(employee.name +"<br>");
+document.write(employee.place +"<br>");
+document.write(employee.currentEmployee+"<br>");
+employee.basicDetails();
+document.write(employee.role +"<br>");
+employee.previous();
+</script>
+</html>		
+ 
+ 
+ 

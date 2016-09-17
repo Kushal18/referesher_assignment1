@@ -1,0 +1,23 @@
+package javaReferesher;
+
+public class Multithread {
+	
+	public static void main(String[] args){
+		int[] array = {1,2,3,4,5,6};
+		System.out.println("Reversing the array");
+		reverse(array , 0 ,array.length - 1 );
+		
+		
+	}
+	public static void reverse(int[] reverseArray , int start , int end){
+		int temp;
+		start =0;
+		end = reverseArray.length - 1;
+		temp = reverseArray[start];
+		reverseArray[start] = reverseArray[end];
+		reverseArray[end] = temp;
+		reverse(reverseArray,start + 1 , end -1);
+		System.out.println("the array " +reverseArray);
+	}
+
+}

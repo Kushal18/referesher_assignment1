@@ -1,0 +1,26 @@
+package javaReferesher;
+
+import java.util.ArrayList;
+
+public class stack {
+private int maxsize;
+private int[] stackArray;
+private int top;
+public stack(int s){
+	maxsize = s;
+	stackArray = new int[maxsize];
+	top = -1;
+}
+public void push(int i){
+	stackArray[++top] = i;
+}
+public int pop(){
+	return stackArray[top--];
+}
+public boolean isEmpty(){
+	return (top == -1);
+}
+public boolean isFull() {
+	return (top == maxsize - 1);
+}
+}

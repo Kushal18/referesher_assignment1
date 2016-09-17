@@ -1,0 +1,9 @@
+<!DOCTYPE html> 
+<html> 
+<head> <meta charset="ISO-8859-1">
+<title> Enter a value to see its output in string , number and boolean form </title> 
+</head> 
+<body>  
+ Value to Convert <input type="text" name="firstname" id="convert"> 
+ <br> <input type="button" id="submit" value="Convert onclick="Convert()" />
+</body>

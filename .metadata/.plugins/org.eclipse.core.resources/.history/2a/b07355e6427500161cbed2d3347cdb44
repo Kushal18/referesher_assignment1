@@ -1,0 +1,22 @@
+<!DOCTYPE html> <html> <head> <meta charset="ISO-8859-1">
+<title>Student validation form</title> </head> 
+<body>  <p><b>Enter student ID</b></p>
+<input type name="Student ID" id="studentid" />  <p id="student"></p> 
+<p><b>Student Name</b></p>  <input type name="Student Name" id="studentname" />  <p id="studentname"></p> 
+<p><b>Student phone no</b></p>  <input type name="studentPhoneNo" id="studentPhoneNo" />  <p id="studentPhoneNo"></p>  </p> 
+ <p><b>Enter Email Id</b></p>  <input type name="EmailId" id="Email" />  <p id="email"></p>  </p>  
+ <br>  <br>  <input type="button" value="checkValidation" id="checkValidation"   onclick="checkValidation()" /> 
+ <script>   
+ function checkValidation() 
+ {  
+ var studentID = new RegExp(/[1-9]{1}\d{9}/);    
+ console.log(document.getElementById("studentid").value);    
+ if (!(document.getElementById("studentid").value).match(studentID)) 
+ {     
+ document.getElementById("student").innerHTML = "Account no cannot start with 0 and cannot be empty";    
+ document.getElementById("student").style.color='red';   
+ } 
+ 
+ </script>
+  </body> 
+  </html>

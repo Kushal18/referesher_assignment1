@@ -1,0 +1,15 @@
+package javaReferesher;
+
+import java.util.ArrayList;
+
+public class stack {
+private int maxsize;
+private int[] stackArray;
+private int top;
+public stack(int s){
+	maxsize = s;
+	stackArray = new long[maxsize];
+	top = -1;
+}
+
+}

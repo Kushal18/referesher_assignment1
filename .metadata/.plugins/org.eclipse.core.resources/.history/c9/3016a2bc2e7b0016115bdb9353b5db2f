@@ -1,0 +1,19 @@
+//select only the first 11 players in the cricket team
+package javaReferesher;
+import java.util.LinkedList; 
+
+public class queue {
+	private LinkedList<String> list = new LinkedList<String>(); 
+	public void enqueue(String person) {   list.addLast(person);  } 
+	 
+	 public String dequeue() {   return list.poll();  } 
+	 
+	 public boolean hasItems() {   return !list.isEmpty();  } 
+	 
+	 public int size() {   return list.size();  } 
+	 
+	} 
+	  
+
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html> 
+<head> <meta charset="ISO-8859-1">
+<title> Employee Registration Form </title> 
+</head> 
+<body>  <p>   <b>Please fill the employee registration form and click submit</b>  </p> 
+ <form id="employeeForm">   
+ First name: <input type="text" name="firstname"> </br> 
+ <br>  Last name: <input type="text" name="lastname"> </br> 
+ <br> Employee ID: <input type="text" name="employeeid"> </br> 
+ <br> Age: <input type="text" name="age"> </br>
+ <br> DOJ: <input type="date" name="Date of Joining"> </br>
+ <br> <input type="button" id="submit" value="Create new employee" onclick="createNewEmployee()" />  </form> 
+ <br>  <br>  <br>  <div id="div1"></div> 
+ <script>  
+ function employee(firstname, lastname, employeeid, age,DOJ) {   
+ this.firstname = firstname;  
+ this.lastname = lastname;   
+ this.employeeid = employeeid;   
+ this.age = age; 
+ this.DOJ = DOJ; 
+ }   
+ function toDisplay(st) {   
+ var x = "Firstname : " + st.firstname + "," + "  lastname : "      
+ + st.lastname + "," + "   employeeid : " + st.employeeid + ","      + "   age : " + st.age + "," + "  DOJ : " +st.DOJ + "         ";   
+ return (x);  
+ } 
+ function createNewEmployee() {  
+ var employeeForm = document.getElementById("employeeForm");   
+ var employee1 = new employee(employeeForm.elements[0].value,   
+ employeeForm.elements[1].value, 
+ employeeForm.elements[2].value,  
+ employeeForm.elements[3].value,
+ employeeForm.elements[4].value); 
+ var div1 = document.getElementById("div1").appendChild( 
+
+     document.createTextNode(toDisplay(employee1))); 
+ 
+  } 
+  </script>
+  </body> 
+  </html>

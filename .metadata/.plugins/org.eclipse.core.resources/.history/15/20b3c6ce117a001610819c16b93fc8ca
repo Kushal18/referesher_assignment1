@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html> 
+<head> <meta charset="ISO-8859-1">
+<title> Enter a value to see its output in string , number and boolean form </title> 
+</head> 
+<body>  
+ Value to Convert <input type="text" name="firstname" id="convert"> 
+ <br> <input type="button" id="submit" value="Convert" onclick="Convert()" /> 
+ <p id ="result"></p> 
+</body>
+
+<script>
+var enteredString;
+var enteredNumber;
+var enteredBoolean;
+
+function Convert(){
+	
+	var toconvert = document.getElementById("convert").value;
+	alert("to convet is" +toconvert);
+    if (toconvert != "" && toconvert != null) {
+		convertStr(toconvert);
+	}else{
+		alert("Incorrect Input.");
+	}
+	}
+function convertStr(toconvert){
+	try{
+	var local = toconvert;
+	
+	enteredString = String(local);
+	enteredNumber = Number(local);
+	enteredBoolean = Boolean(Number(local));
+	
+	var message = "You entered  : "+ local+"<br>"+ "Converted value of "+local+" in <br> String : "+enteredString+ "<br>Integer : "+enteredNumber+"<br>Boolean : "+enteredBoolean;
+	document.getElementById("result").innerHTML = message;
+	alert("type of string is"+typeof(enteredString));
+	alert("type of integer is"+typeof(enteredNumber));
+	alert("type of Boolean is"+typeof(enteredBoolean));
+	}catch(e){
+		alert("Something went wrong while converting");
+	}
+}
+
+
+</script>
+
+
+
+
+
+
+
+

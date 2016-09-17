@@ -1,0 +1,54 @@
+//delete a duplicate element from a linked list
+
+package javaReferesher;
+
+import java.util.HashSet;
+class LinkedList
+{
+    Node head;  // head of list
+ 
+    
+}
+/* Linked list Node*/
+class Node
+{
+    int data;
+    Node next;
+      
+    // Constructor to create a new node
+    // Next is by default initialized as null
+    Node(int d) {data = d; next=null;}
+}
+
+public class collections {
+
+	public static void main(String[] args){
+		LinkedList linkedList = new LinkedList();
+		//add elements onto the linked list
+		linkedList.head = new Node(1);
+		Node second      = new Node(2);
+        Node third       = new Node(3);
+        Node fourth       = new Node(4);
+        Node fifth       = new Node(2);
+		//1->2->3->4->1->5 hence the final output should be : 1->2->3->4->5
+
+ 
+	}
+	
+	public LinkedList<Integer> removeDuplicates(LinkedList<Integer> root){
+		LinkedList<Integer> current = root;
+		LinkedList<Integer> previous = null;
+		HashSet<Integer> dupSet = new HashSet<Integer>();
+		
+		for(int i : current){
+			if(dupSet.contains(i)){
+				previous.
+			} else{
+			dupSet.add(i);
+			
+			}
+		}
+		
+		
+	}
+}
