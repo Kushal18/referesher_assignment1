@@ -1,0 +1,19 @@
+//delete a duplicate element from a linked list
+
+package javaReferesher;
+import java.io.File;
+import java.util.*;
+import java.util.HashSet;
+
+public class collections {
+
+	public static void main(String[] args) throws InterruptedException{
+		ArrayList<String> questions;
+		HashMap<String,String> questAns = new HashMap<String,String>();
+		File questionFile = new File("D:/CMPE273/ReadQuestion.xml");
+		
+		
+	}
+	
+	
+}

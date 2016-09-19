@@ -1,0 +1,83 @@
+<!DOCTYPE html> <html> <head> <meta charset="ISO-8859-1"> <title>Software development Life cycle </title> 
+
+</head> <body> <H1> Please click on the steps you follow to develop a software error will be thrown if you click on the wrong step</H1> 
+<input type="button" id="step4" value="step1" onclick="checkSteps()"> Coding <br>
+<input type="button" id="step6" value="step2"onclick="checkSteps()"> Implementation<br>
+<input type="button" id="step5" value="step3"onclick="checkSteps()"> Testing<br> 
+<input type="button" id="step3" value="step4"onclick="checkSteps()"> System Design<br>
+<input type="button" id="step1" value="step5"onclick="checkSteps()"> Requirement gathering and analysis<br>
+<input type="button" id="step2" value="step6"onclick="checkSteps()"> System Analysis<br>
+<input type = "button" value="Reset" onclick="reset()">
+ <div id="result"></div> </body>
+ <script> 
+ var seq='abcdef'; 
+ var inputSeq='';
+ var  i=1; 
+ function reset()
+ {           
+ i=1; 
+ inputSeq=''; 
+ } 
+ function checkSteps()
+ {  
+ if('step1'==window.event.target.id)
+ {  
+ inputSeq= inputSeq+'a'; 
+ }  
+ else if('step2'==window.event.target.id)
+ {   
+ inputSeq= inputSeq+'b';  
+ }  
+ else if('step3'==window.event.target.id)
+ {   
+ inputSeq= inputSeq+'c';  
+ }  
+ else if('step4'==window.event.target.id)
+ {   
+ inputSeq= inputSeq+'d';  
+ }  
+ else if('step5'==window.event.target.id)
+ {   
+ inputSeq= inputSeq+'e';  
+ } 
+else if('step5'==window.event.target.id)
+ {   
+ inputSeq= inputSeq+'f';  
+ }  
+ try  
+ {   
+ if(inputSeq==seq.substring(0,i))
+ {    
+ alert("You have selected the correct step" + i);   
+ }   
+ else
+ {    
+ switch(i)
+ {    
+ case 1:    throw "You have to gather the requirement and analyze" ;    
+ break;    
+ case 2:    throw "Analyse the system" ;
+ break;    
+ case 3:    throw "design the system" ;   
+ break;  
+ case 4:    throw "after design coding is the next step" ;  
+ break;   
+ case 5:    throw "Testing should be done after coding" ;  
+ break;   
+ case 6:    throw "Implementation of the software is the last step" ;  
+ break;   
+ }   
+ }  
+ }  
+ catch(err)
+ {  
+ alert(err);  
+ }  
+ i++;  
+ if(inputSeq==seq)
+ {  
+ alert("These are the steps to be followed for software development life cycle");  
+ } 
+ } 
+ </script> 
+ </html> 

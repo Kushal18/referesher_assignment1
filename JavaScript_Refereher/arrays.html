@@ -1,0 +1,44 @@
+<!DOCTYPE html> <html> <head> <meta charset="ISO-8859-1"> 
+<title>Book's Organizer</title> </head> 
+<body>  
+<div id="entry">   
+<H1>Enter the name of book, and click save to display them in sorted format also you can select the books and click delete to delete them</H1>   
+<input type="text" id="name" > <input type="button"    value="Save" id="Save" onClick="save()" /> <input type="button" value="delete" id="delete" onClick="deleteBook()" />  </div>  <br>  <br>  <div id="show"></div> </body>
+<script>  
+var books = [];  
+var show = document.getElementById("show");  
+function save() {   
+var name = document.getElementById("name").value;   
+books.push(name);   
+books.sort();   
+show.innerHTML = "";   
+for (i = 0; i < books.length; i++) {    
+var check = document.createElement("INPUT");    
+check.setAttribute("type", "checkbox");    
+check.setAttribute("id", books[i]);    
+show.appendChild(check);    
+var lab = document.createElement("LABEL");    
+var text = document.createTextNode(books[i]);    
+lab.setAttribute("for", books[i]);    
+lab.setAttribute("id", books[i] + "txt");    
+lab.appendChild(text);    
+show.appendChild(lab);    
+var newLine = document.createElement("br");    
+show.appendChild(newLine);   
+}  
+} 
+ 
+function deleteBook() {   
+for (i = 0; i < books.length; i++) {    
+var book = document.getElementById(books[i]);    
+var txt = document.getElementById(books[i] + "txt")    
+if (book.checked == true) {     
+show.removeChild(book);     
+books.pop(i);     
+show.removeChild(txt);    
+}   
+}  
+} 
+</script> 
+
+</html> 

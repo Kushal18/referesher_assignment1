@@ -1,0 +1,64 @@
+package javaReferesher;
+
+import java.util.ArrayList;
+
+public class Kushal implements student{
+	String name = "Kushal Joshi";
+	int myId = 010365277;
+	String attendance = "70%";
+@Override
+public void studentName(String name) {
+	// TODO Auto-generated method stub
+	this.name = name;
+	System.out.println("student name is " +name);
+	
+}
+
+@Override
+public void studentId(int id) {
+	// TODO Auto-generated method stub
+	this.myId=id;
+	System.out.println("student Id is " +name);
+}
+@Override
+public ArrayList<String> courses() {
+	// TODO Auto-generated method stub
+	ArrayList<String> studentCourses = new ArrayList<String>();
+	studentCourses.add("CMPE - 273");
+	studentCourses.add("CMPE - 206");
+	studentCourses.add("CMPE - 277");
+	System.out.println(this.name+" has take these courses");
+	for(int i = 0 ; i < studentCourses.size() ; i++){
+		System.out.println( studentCourses.get(i));
+	}
+	return null;
+}
+@Override
+public void gpa(String gpa) {
+	// TODO Auto-generated method stub
+String Gpa = "3.5";
+System.out.println(this.name+ " has a gpa of " +Gpa);
+
+}
+@Override
+public void attendance(String attendance) {
+	// TODO Auto-generated method stub
+	System.out.println(this.name+ " has a attendance of " +this.attendance);
+}
+@Override
+public boolean goingToSchool(boolean value) {
+	// TODO Auto-generated method stub
+	System.out.println(this.name +" Is going to school" );
+	return true;
+}
+public static void main(String[] args){
+	Kushal student = new Kushal();
+	student.studentName("kushal");
+	student.attendance("70%");
+	student.gpa("3.5");
+	student.courses();
+	
+	
+	
+}
+}

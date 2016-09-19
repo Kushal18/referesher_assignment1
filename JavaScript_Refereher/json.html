@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html> 
+<head> <meta charset="ISO-8859-1"> 
+<title>Employee Registration Form</title> 
+</head> 
+<body> <p><b>Please fill the employee registration form and click submit</b></p> 
+<form id="employeeForm">   First name:   <input type="text" name="firstname"> </br>  
+<br>   Last name:    <input type="text" name="lastname">  </br>   
+<br>   Employee ID:      <input type="text" name="sjsuid">    </br>   
+<br>   Age:          <input type="text" name="age">       </br>   
+<br>   <input type="button" id="submit" value="convert to Json string" onclick="writeJSONOnScreen()"/> 
+</form> 
+<div id="showInJson"></div> 
+<div id="printDetails"> <br> 
+<br> <input type="button" value="read-able form" onclick="displayOnScreen()"/> </div> 
+<script> 
+function writeJSONOnScreen() {   
+var employeeForm = document.getElementById("employeeForm");   
+var employee = {    
+firstname : employeeForm.elements[0].value,    
+lastname : employeeForm.elements[1].value,    
+employeeId : employeeForm.elements[2].value,    
+age : employeeForm.elements[3].value   
+};   
+var jase = JSON.stringify(employee);   
+var divPrint = document.getElementById("showInJson");   
+divPrint.innerHTML = jase;   
+//console.log(document.getElementById("showInJson").innerhtml);  
+}  
+function displayOnScreen() {   
+var employeeJsonObj = JSON.parse(document.getElementById("showInJson").innerHTML);   
+console.log(employeeJsonObj);   
+var divWrite = document.getElementById("printDetails"); 
+divWrite.innerHTML = "FirstName :" + employeeJsonObj.firstname + '<br>'+ "LastName :" + employeeJsonObj.lastname + '<br>' + "Employee ID :"+ employeeJsonObj.sjsuid + '<br>' + "Age :" + employeeJsonObj.age; 
+} 
+</script> 
+</body> 
+</html> 

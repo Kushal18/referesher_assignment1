@@ -1,0 +1,12 @@
+//delete a duplicate element from a linked list
+
+package javaReferesher;
+import java.util.*;
+import java.util.HashSet;
+
+public class collections {
+
+	
+	
+	
+}

@@ -1,0 +1,51 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <input type = "text" id ="book" name="Book"/>
+        <input type = "button" value="search" id="search" onclick = "search()"/>
+        <br>  <br>  <div id="show"></div> 
+    </body>
+    <script>
+    var library = { 
+            book1 : {
+            name : "data structures",
+            copies : 3
+            },
+
+            book2 : {
+            name : "Cracking the coding",
+            copies : 2
+            },
+
+            book3 : {
+            name : "javascript",
+            copies : 5
+            },
+
+            book4 : {
+            name : "3 mistakes of my life",
+            copies : 5
+            },
+
+            book5 : {
+            name : "elements of programming",
+            copies : 1
+            }
+
+}
+
+
+function search(){
+var bookToSearch = document.getElementById("book").value;
+document.getElementById("show").innerHTML= d
+
+if(bookToSearch === library.book1.name)   {
+
+}
+
+}
+    
+    </script>
+</html>

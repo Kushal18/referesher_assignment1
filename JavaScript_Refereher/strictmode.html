@@ -1,0 +1,40 @@
+<!DOCTYPE html> <html> <head> <meta charset="ISO-8859-1">
+<title>Credit and debit transaction</title> </head> 
+<body> <label for="swipe"><b>Enter Creditcard swipe</b></label> 
+<input type="text"  name="CreditCard"  id="inputBox1"/>  
+<select name="category" id="category">     <option value="Food">Food</option>     
+<option value="Shopping">Shopping</option>     <option value="Phone">Phone</option>   
+<option value="Other">Other</option> </select> 
+<br> <br> <input type="button" value="SaveDebt" id="saveDebt" onclick="saveDebt()" /> <br> <br>
+<label for="earning"><b>Enter Monthly Earning</b></label> 
+<input type="text"  name="Earning"  id="inputBox2"/> 
+<input type="button" value="calculateTotal" id="calculateTotal"  onclick="calculateTotal()"/> <br> <br> <br> 
+<div id="details"></div> <p id="Total"> </p> 
+</body> 
+<script> 
+"use strict";  
+var debt = 0;  
+var total=0;  
+var earning=0;  
+function saveDebt() { 
+var x = parseInt(document.getElementById("inputBox1").value);   
+var y = document.getElementById("category").value;   
+debt = debt + x;   
+document.getElementById("details").innerHTML = document.getElementById("details").innerHTML+'<b>'+ y + '</b>'+ ":" + x +'$'+ '<br>';   
+calculateTotal();  
+}  
+function calculateTotal() {   
+earning =parseInt(document.getElementById("inputBox2").value);   
+if(!isNaN(earning)) {   
+var total= earning-debt;   
+document.getElementById("Total").innerHTML= "Total money left from the wallet is-" + total + '$';   
+if(total<100 && total>0) {    
+alert("Very little left in your wallet " +total+'$');   
+}   
+else if(total < 0)  {    
+	alert("You are in debt")   
+	}   
+	}     
+	} 
+	</script> 
+	</html>

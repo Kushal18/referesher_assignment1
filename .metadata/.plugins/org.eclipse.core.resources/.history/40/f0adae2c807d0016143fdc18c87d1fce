@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head><script type="text/javascript" src ="../test_javascript/data.json" ></script></head>
+<body onload="getData();">
+<h1> Employee details </h1>
+<h2>Employee Name : <b id="employee"></b> &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 
+Employee ID : <b id="employeeid" ></b> </h2>
+<input type="button" onclick ="showDetails()" value="Show Details" name="Show Details" />
+<p id="details"></p>
+</body>
+<script>
+var data = '{"name":"kushal",'+
+'"salary" :"3.8",'+
+'"age"':"27",'+
+'"details":[{"employeeid":"010365277",'+
+'"number":"CMPE 273","manager":"Simon Shim","days":"Mon and Wed"}'+
+',{"coursename":"Computer Network Design",'+
+'"number":"CMPE 206","professor":"Juan Gomez","days":"Mon"}'+
+',{"coursename":"Master Project I",'+
+'"number":"CMPE 295A","professor":"Dan Harkey","days":"Fri"}]}'
+           
+function getData()
+{ 
+	var result = JSON.parse(data);
+	var employeeName = result.name;
+	var employeeid = result.details[0].employeeid; 
+	document.getElementById("employee").innerHTML = employeeName; 
+	document.getElementById("employeeid").innerHTML = employeeid;
+	var table = "<table border =\"1\" width=\"100%\"><tr><th>Name</th><th>Age</th><th>employeeid</th><th>Employee Name</th><th>salary</th></tr>"+
+
+	
+}
+
+function showDetails(){
+	
+
+	"<tr><td>"+result[0].name+"</td>"+
+	"<td>"+result[0].age+"</td>"+
+	"<td>"+result[0].sex+"</td>"+
+	"<td>"+result[0].type+"</td>"+
+	"<td>"+result[0].balance+"</td></tr>"+
+	"<tr><td>"+result[1].name+"</td>"+
+	"<td>"+result[1].age+"</td>"+
+	"<td>"+result[1].sex+"</td>"+
+	"<td>"+result[1].type+"</td>"+
+	"<td>"+result[1].balance+"</td></tr>"+
+	"</table>";
+}
+</script>
+</html>

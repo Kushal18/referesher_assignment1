@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="ISO-8859-1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <style>
+        .back {
+            background-image: url("Coldplay-Hymn-for-the-Weekend.jpg");
+        }
+    </style>
+    <title>Hymn for the weekend</title>
+</head>
+
+<body class="back">
+    <div class="container-fluid" style="background-image: url(" Coldplay-Hymn-for-the-Weekend.jpg ");">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h1 class="text-center" style="color:white;font-weight: bold;">Hymn-for-the-Weekend</h1>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="text-center">
+                <iframe src="http://www.youtube.com/embed/dP15zlyra3c?html5=1"></iframe>
+                 <iframe class="youtube-player" type="text/html" width="640" height="385" src="https://www.youtube.com/results?search_query=zindagi+na+milegi+dobara+ik+junoon" frameborder="0"> </iframe>
+				 
+                 Your browser does not support the video tag.
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+
+                <h2 style="color:white;font-weight: bold;" class="text-center">Top tracks</h2>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <p style="color:white;font-weight: bold;"> Main theme song</p>
+                    <audio controls>
+                      <source src="main.ogg" type="audio/ogg">
+                      <source src="main.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <p style="color:white;font-weight: bold;"> End theme</p>
+                    <audio controls>
+                      <source src="track2.ogg" type="audio/ogg">
+                      <source src="track2.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
